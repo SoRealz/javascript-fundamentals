@@ -180,3 +180,11 @@ for (let i = 0; i < result.length; i++) {
   return null; // 
 }
 }
+
+// Get the learner data based on the provided inputs.
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+
+// Print the result if no errors occurred during processing.
+if (result !== null) {
+  console.log(result);
+}
