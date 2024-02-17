@@ -124,3 +124,5 @@ function getLearnerData(course, ag, submissions) {
           scores: {}
         };
       }
+ // Find the assignment based on assignment ID.
+ const assignment = ag.assignments.find(a => a.id === assignmentID);
