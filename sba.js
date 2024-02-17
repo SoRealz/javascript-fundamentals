@@ -151,3 +151,11 @@ const result = Object.values(learnerData).map(learner => {
 });
 
 
+// Utilize at least one loop control keyword such as break or continue.
+for (let i = 0; i < result.length; i++) {
+  // Demonstrate the retrieval, manipulation, and removal of items in an array.
+  const learnerInfo = result[i];
+  console.log(`Learner ID: ${learnerInfo.id}, Average Score: ${learnerInfo.avg}`);
+  // Optionally manipulate or remove items in the array.
+}
+  
