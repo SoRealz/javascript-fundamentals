@@ -107,4 +107,4 @@ function getLearnerData(course, ag, submissions) {
   // Object to store processed learner data.
   const learnerData = {};
 
-}
+
