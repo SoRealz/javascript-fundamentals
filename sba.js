@@ -140,3 +140,14 @@ function getLearnerData(course, ag, submissions) {
   learnerData[learnerID].scores[assignmentID] = score / pointsPossible;
 });
   
+// Calculate averages for each learner using a loop.
+const result = Object.values(learnerData).map(learner => {
+  const avg = learner.totalScore / learner.totalPoints;
+  return {
+    id: learner.id,
+    avg: avg.toFixed(3),
+    ...learner.scores
+  };
+});
+
+
