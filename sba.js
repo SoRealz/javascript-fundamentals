@@ -107,4 +107,20 @@ function getLearnerData(course, ag, submissions) {
   // Object to store processed learner data.
   const learnerData = {};
 
+  try {
+    // Process learner submissions
+    submissions.forEach(submission => {
+      // Declare variables using const and let.
+      const learnerID = submission.learner_id;
+      const assignmentID = submission.assignment_id;
+      const score = submission.submission.score;
 
+      // If learner data doesn't exist, create a new entry.
+      if (!learnerData[learnerID]) {
+        learnerData[learnerID] = {
+          id: learnerID,
+          totalScore: 0,
+          totalPoints: 0,
+          scores: {}
+        };
+      }
