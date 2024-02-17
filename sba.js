@@ -126,3 +126,17 @@ function getLearnerData(course, ag, submissions) {
       }
  // Find the assignment based on assignment ID.
  const assignment = ag.assignments.find(a => a.id === assignmentID);
+   // If assignment is not found, throw an error.
+   if (!assignment) {
+    throw new Error(`Assignment with ID ${assignmentID} not found.`);
+  }
+
+  // Calculate points possible for the assignment.
+  const pointsPossible = assignment.points_possible;
+
+  // Update learner data with submission information.
+  learnerData[learnerID].totalScore += score;
+  learnerData[learnerID].totalPoints += pointsPossible;
+  learnerData[learnerID].scores[assignmentID] = score / pointsPossible;
+});
+  
