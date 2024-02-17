@@ -159,3 +159,24 @@ for (let i = 0; i < result.length; i++) {
   // Optionally manipulate or remove items in the array.
 }
   
+ // Optionally utilize at least one switch statement.
+ let status = "Pass";
+ switch (status) {
+   case "Pass":
+     console.log("All learners passed.");
+     break;
+   case "Fail":
+     console.log("Some learners failed.");
+     break;
+   default:
+     console.log("Status unknown.");
+ } 
+
+  // Return the processed data.
+  return result;
+} catch (error) {
+  // Use try/catch statements to manage potential errors.
+  console.error("An error occurred:", error.message);
+  return null; // 
+}
+}
